@@ -119,7 +119,8 @@ char TTTBoard::threeInARow() {
     }
     if (a[0][0] && a[0][0] == a[1][1] && a[1][1] == a[2][2]) return a[0][0];
     if (a[2][0] && a[2][0] == a[1][1] && a[1][1] == a[0][2]) return a[2][0];
-    return 0;
+    for (auto i : a) for (char j : i) if (j == 0) return 0;
+    return 'D';
 }
 
 void TTTBoard::drawBoard() {

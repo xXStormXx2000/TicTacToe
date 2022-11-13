@@ -28,7 +28,8 @@ int main() {
 		win = a.threeInARow();
 		if (win) {
 			a.drawBoard();
-			std::cout << '\n' << win << " WINS!!!!";
+			if (win == 'D') std::cout << '\n' << "It's a Draw";
+			if (win != 'D') std::cout << '\n' << win << " WINS!!!!";
 			break;
 		}
 	}
